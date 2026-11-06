@@ -1,12 +1,88 @@
 import './App.css'
 
+const projects = [
+  {
+    number: '01',
+    status: 'COMPLETED',
+    type: 'BACKEND DEVELOPMENT',
+    name: 'StockFlow',
+    description:
+      'An inventory management REST API built to manage products, track stock movements and monitor inventory levels. Includes product CRUD operations, stock validation, database migrations and automated integration tests.',
+    technologies: ['C#', '.NET 10', 'ASP.NET Core', 'EF Core', 'SQL Server', 'xUnit'],
+    github: 'https://github.com/Antidote857/StockFlow',
+    featured: true,
+  },
+  {
+    number: '02',
+    status: 'ACTIVE DEVELOPMENT',
+    type: 'FULL-STACK / WEB APPLICATION',
+    name: 'REALM',
+    description:
+      'A community platform exploring how online communities can become more engaging and useful for creators. Developed using a modern JavaScript-based web stack.',
+    technologies: ['React', 'JavaScript', 'Node.js', 'Express', 'SQLite', 'REST APIs'],
+    github: 'https://github.com/Antidote857/REALM',
+  },
+  {
+    number: '03',
+    status: 'COMPLETED',
+    type: 'JAVA APPLICATION',
+    name: 'Smart Queue Manager',
+    description:
+      'A Java console application for managing customer queues. Supports normal and priority queues, serving customers, searching, removing waiting customers and viewing queue statistics.',
+    technologies: ['Java 21', 'OOP', 'Collections', 'Git', 'GitHub'],
+    github: 'https://github.com/Antidote857/smart-queue-manager',
+  },
+  {
+    number: '04',
+    status: 'COMPLETED',
+    type: 'JAVA / SEARCH APPLICATION',
+    name: 'Spy-der',
+    description:
+      'A mini search engine project focused on searching and retrieving information from a collection of documents.',
+    technologies: ['Java', 'Search', 'Problem Solving', 'Git', 'GitHub'],
+    github: 'https://github.com/Antidote857/mini-search-engine',
+  },
+  {
+    number: '05',
+    status: 'COMPLETED',
+    type: 'WEB DEVELOPMENT',
+    name: 'Bridge-to-Learning',
+    description:
+      'A responsive website for an education-focused organisation, designed to communicate its services and provide visitors with a clear way to request consultations.',
+    technologies: ['HTML', 'CSS', 'JavaScript', 'Responsive Design'],
+    github: 'https://github.com/Antidote857/bridge-to-learning',
+  },
+]
+
+const skillGroups = [
+  {
+    number: '01',
+    title: 'Programming Languages',
+    skills: ['C#', 'Java', 'JavaScript', 'SQL', 'HTML', 'CSS'],
+  },
+  {
+    number: '02',
+    title: 'Frameworks & Development',
+    skills: ['.NET 10', 'ASP.NET Core', 'Entity Framework Core', 'React', 'Node.js', 'Express', 'REST APIs'],
+  },
+  {
+    number: '03',
+    title: 'Databases & Tools',
+    skills: ['SQL Server', 'PostgreSQL', 'SQLite', 'Git', 'GitHub', 'Visual Studio Code', 'IntelliJ IDEA', 'Maven'],
+  },
+  {
+    number: '04',
+    title: 'Technical Practices',
+    skills: ['Object-Oriented Programming', 'CRUD Operations', 'Debugging', 'API Testing', 'xUnit', 'System Analysis', 'Problem Solving'],
+  },
+]
+
 function App() {
   return (
     <>
-      {/* Navigation */}
       <nav>
         <div className="nav-container">
-          <a href="#home" className="logo">
+          <a href="#home" className="logo" aria-label="Bhekinkosi Mguni home">
             BM
           </a>
 
@@ -19,336 +95,272 @@ function App() {
         </div>
       </nav>
 
-      
-      {/* Hero */}
-<section id="home">
-  <div className="hero-content">
-    <p className="hero-label">HELLO, I'M</p>
+      <main>
+        {/* Hero */}
+        <section id="home">
+          <div className="hero-content">
+            <p className="hero-label">HELLO, I'M</p>
 
-    <h1>Bhekinkosi Mguni</h1>
+            <h1>Bhekinkosi Mguni</h1>
 
-    <h2>IT Graduate & Aspiring Software Developer</h2>
+            <h2>IT Graduate & Junior Software Developer</h2>
 
-    <p className="hero-description">
-      I build practical software, explore AI-powered applications,
-      and solve problems through code.
-    </p>
+            <p className="hero-description">
+              I am a Bachelor of Information Technology in Business Systems
+              graduate interested in building practical software, developing
+              backend applications and solving real-world problems through
+              technology.
+            </p>
 
-    <div className="hero-status">
-      <span className="status-dot"></span>
-      <span>Open to Software Development Opportunities</span>
-    </div>
+            <div className="hero-status">
+              <span className="status-dot" aria-hidden="true"></span>
+              <span>Open to Graduate and Junior IT Opportunities</span>
+            </div>
 
-    <div className="hero-buttons">
-  <a href="#projects" className="primary-button">
-    View My Projects
-  </a>
+            <div className="hero-buttons">
+              <a href="#projects" className="primary-button">
+                Explore My Work
+              </a>
 
-  <a
-   href="/BHEKINKOSI%20MGUNI%20-%20CV.pdf"
-    target="_blank"
-    rel="noreferrer"
-    className="secondary-button"
-  >
-    View CV
-  </a>
+              <a
+                href="/BHEKINKOSI%20MGUNI%20-%20CV.pdf"
+                target="_blank"
+                rel="noreferrer"
+                className="secondary-button"
+              >
+                View CV
+              </a>
 
-  <a
-    href="https://github.com/Antidote857"
-    target="_blank"
-    rel="noreferrer"
-    className="secondary-button"
-  >
-    GitHub
-  </a>
-</div>
-  </div>
-</section>
+              <a
+                href="https://github.com/Antidote857"
+                target="_blank"
+                rel="noreferrer"
+                className="secondary-button"
+              >
+                GitHub
+              </a>
+            </div>
+          </div>
+        </section>
 
-      
-      {/* About */}
-<section id="about">
-  <div className="section-heading">
-    <p>ABOUT ME</p>
-    <h2>Building, Learning, Solving.</h2>
-  </div>
+        {/* About */}
+        <section id="about">
+          <div className="section-heading">
+            <p>ABOUT ME</p>
+            <h2>Business Systems. Technology. Development.</h2>
+          </div>
 
-  <div className="about-content">
-    <div className="about-main">
-      <p>
-        I'm a recent Information Technology graduate with a strong interest
-        in software development and practical problem solving.
-      </p>
+          <div className="about-content">
+            <div className="about-main">
+              <p>
+                I am a recent Bachelor of Information Technology in Business
+                Systems graduate from Rosebank International University
+                College. My academic background has given me an understanding
+                of how technology supports business processes and
+                organisational needs.
+              </p>
 
-      <p>
-        I enjoy taking ideas from concept to working software, investigating
-        bugs, learning new technologies, and understanding how different
-        parts of a system work together.
-      </p>
+              <p>
+                I have developed practical software projects using C#, .NET,
+                ASP.NET Core, Java, JavaScript and relational databases. I
+                particularly enjoy backend development, working with APIs,
+                database integration, debugging and testing.
+              </p>
 
-      <p>
-        My current development work includes REALM, an AI-powered community
-        platform, as well as web development projects such as
-        Bridge-to-Learning.
-      </p>
+              <p>
+                My projects include StockFlow, an inventory management REST
+                API, as well as Java applications and web-based projects.
+                Through these projects, I continue to strengthen my
+                development skills and learn how to build reliable
+                applications.
+              </p>
 
-      <p>
-        I'm looking for opportunities where I can contribute to real-world
-        software, learn from experienced developers, and continue growing
-        as a software developer.
-      </p>
-    </div>
+              <p>
+                I am looking for an opportunity to contribute, learn from
+                experienced teams and grow as a software developer.
+              </p>
+            </div>
 
-    <div className="about-highlights">
-      <div className="highlight">
-        <span className="highlight-number">01</span>
-        <div>
-          <h3>Software Development</h3>
-          <p>
-            Building applications and features using modern development tools
-            and frameworks.
-          </p>
-        </div>
-      </div>
+            <div className="about-highlights">
+              <div className="highlight">
+                <span className="highlight-number">01</span>
+                <div>
+                  <h3>Backend Development</h3>
+                  <p>
+                    Building REST APIs, implementing application logic and
+                    integrating relational databases.
+                  </p>
+                </div>
+              </div>
 
-      <div className="highlight">
-        <span className="highlight-number">02</span>
-        <div>
-          <h3>Problem Solving</h3>
-          <p>
-            Debugging issues, investigating problems, and finding practical
-            solutions.
-          </p>
-        </div>
-      </div>
+              <div className="highlight">
+                <span className="highlight-number">02</span>
+                <div>
+                  <h3>Business Systems</h3>
+                  <p>
+                    Understanding business requirements and how software
+                    applications support business operations.
+                  </p>
+                </div>
+              </div>
 
-      <div className="highlight">
-        <span className="highlight-number">03</span>
-        <div>
-          <h3>Continuous Learning</h3>
-          <p>
-            Constantly improving my technical skills through projects and
-            hands-on development.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+              <div className="highlight">
+                <span className="highlight-number">03</span>
+                <div>
+                  <h3>Continuous Improvement</h3>
+                  <p>
+                    Learning through hands-on projects, testing, debugging
+                    and solving technical problems.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-{/* Skills */}
-<section id="skills">
-  <div className="section-heading">
-    <p>TECHNICAL SKILLS</p>
-    <h2>Tools I Work With.</h2>
-  </div>
+        {/* Education */}
+        <section id="education">
+          <div className="section-heading">
+            <p>EDUCATION</p>
+            <h2>Academic Background.</h2>
+          </div>
 
-  <div className="skills-grid">
+          <div className="education-card">
+            <div>
+              <p className="project-type">2022 — 2026</p>
+              <h3>Bachelor of Information Technology in Business Systems</h3>
+              <p>Rosebank International University College</p>
+            </div>
+            <span className="education-level">NQF LEVEL 7</span>
+          </div>
+        </section>
 
-    <div className="skill-category">
-      <span className="skill-number">01</span>
+        {/* Skills */}
+        <section id="skills">
+          <div className="section-heading">
+            <p>TECHNICAL SKILLS</p>
+            <h2>Technologies & Tools.</h2>
+          </div>
 
-      <h3>Languages</h3>
+          <div className="skills-grid">
+            {skillGroups.map((group) => (
+              <div className="skill-category" key={group.number}>
+                <span className="skill-number">{group.number}</span>
+                <h3>{group.title}</h3>
 
-      <div className="skill-list">
-        <span>Java</span>
-        <span>JavaScript</span>
-        <span>Python</span>
-        <span>HTML</span>
-        <span>CSS</span>
-      </div>
-    </div>
+                <div className="skill-list">
+                  {group.skills.map((skill) => (
+                    <span key={skill}>{skill}</span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
 
-    <div className="skill-category">
-      <span className="skill-number">02</span>
+        {/* Projects */}
+        <section id="projects">
+          <div className="section-heading">
+            <p>SELECTED WORK</p>
+            <h2>Projects I've Built.</h2>
+          </div>
 
-      <h3>Development</h3>
+          <div className="projects-grid">
+            {projects.map((project) => (
+              <article
+                className={`project-card${project.featured ? ' featured-project' : ''}`}
+                key={project.number}
+              >
+                <div className="project-header">
+                  <span className="project-number">{project.number}</span>
+                  <span className="project-status">{project.status}</span>
+                </div>
 
-      <div className="skill-list">
-        <span>React</span>
-        <span>Vite</span>
-        <span>Node.js</span>
-        <span>REST APIs</span>
-        <span>Databases</span>
-      </div>
-    </div>
+                <div className="project-content">
+                  <p className="project-type">{project.type}</p>
+                  <h3>{project.name}</h3>
 
-    <div className="skill-category">
-      <span className="skill-number">03</span>
+                  <p className="project-description">
+                    {project.description}
+                  </p>
 
-      <h3>Tools</h3>
+                  <div className="project-tech">
+                    {project.technologies.map((technology) => (
+                      <span key={technology}>{technology}</span>
+                    ))}
+                  </div>
 
-      <div className="skill-list">
-        <span>Git</span>
-        <span>GitHub</span>
-        <span>VS Code</span>
-        <span>IntelliJ IDEA</span>
-        <span>NetBeans</span>
-        <span>PyCharm</span>
-        <span>npm</span>
-      </div>
-    </div>
+                  <div className="project-links">
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={`View ${project.name} on GitHub`}
+                    >
+                      View on GitHub <span aria-hidden="true">↗</span>
+                    </a>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
 
-    <div className="skill-category">
-      <span className="skill-number">04</span>
+        {/* Contact */}
+        <section id="contact">
+          <div className="section-heading">
+            <p>CONTACT</p>
+            <h2>Let's Build Something.</h2>
+          </div>
 
-      <h3>Core Strengths</h3>
+          <div className="contact-content">
+            <div className="contact-intro">
+              <p>
+                I am currently exploring graduate and junior opportunities in
+                software development and IT. I am keen to contribute to
+                meaningful projects, develop my technical skills and learn
+                from experienced professionals.
+              </p>
 
-      <div className="skill-list">
-        <span>Debugging</span>
-        <span>Problem Solving</span>
-        <span>System Analysis</span>
-        <span>Troubleshooting</span>
-        <span>Clean Code</span>
-        <span>Continuous Learning</span>
-      </div>
-    </div>
+              <p>
+                If you would like to discuss an opportunity or learn more
+                about my work, feel free to get in touch.
+              </p>
+            </div>
 
-  </div>
-</section>
+            <div className="contact-links">
+              <a
+                href="mailto:mgunibhekinkosi5@gmail.com"
+                aria-label="Email Bhekinkosi Mguni"
+              >
+                <span>Email</span>
+                <span>↗</span>
+              </a>
 
-      {/* Projects */}
-<section id="projects">
-  <div className="section-heading">
-    <p>MY WORK</p>
-    <h2>Featured Projects.</h2>
-  </div>
+              <a
+                href="https://github.com/Antidote857"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span>GitHub</span>
+                <span>↗</span>
+              </a>
 
-  <div className="projects-grid">
+              <a
+                href="https://developer-portfolio-six-blush.vercel.app"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span>Live Portfolio</span>
+                <span>↗</span>
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
 
-    {/* REALM */}
-    <article className="project-card featured-project">
-      <div className="project-header">
-        <span className="project-number">01</span>
-        <span className="project-status">ACTIVE DEVELOPMENT</span>
-      </div>
-
-      <div className="project-content">
-        <p className="project-type">AI / WEB APPLICATION</p>
-
-        <h3>REALM</h3>
-
-        <p className="project-description">
-          An AI-powered community platform exploring how artificial
-          intelligence can make online communities smarter while giving
-          creators opportunities to build businesses around their
-          communities.
-        </p>
-
-        <div className="project-tech">
-          <span>React</span>
-          <span>JavaScript</span>
-          <span>Vite</span>
-          <span>AI</span>
-          <span>REST APIs</span>
-          <span>Git</span>
-        </div>
-
-        <div className="project-links">
-          <a
-            href="https://github.com/Antidote857/REALM"
-            target="_blank"
-            rel="noreferrer"
-          >
-            GitHub →
-          </a>
-        </div>
-      </div>
-    </article>
-
-    {/* Bridge-to-Learning */}
-    <article className="project-card">
-      <div className="project-header">
-        <span className="project-number">02</span>
-        <span className="project-status">COMPLETED</span>
-      </div>
-
-      <div className="project-content">
-        <p className="project-type">WEB DEVELOPMENT</p>
-
-        <h3>Bridge-to-Learning</h3>
-
-        <p className="project-description">
-          A responsive educational consulting website designed to present
-          information clearly and provide a professional online presence
-          for an education-focused organisation.
-        </p>
-
-        <div className="project-tech">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-          <span>Responsive Design</span>
-        </div>
-
-        <div className="project-links">
-          <a
-            href="https://github.com/Antidote857/bridge-to-learning"
-            target="_blank"
-            rel="noreferrer"
-          >
-            GitHub →
-          </a>
-        </div>
-      </div>
-    </article>
-
-  </div>
-</section>
-
-      {/* Contact */}
-<section id="contact">
-  <div className="section-heading">
-    <p>CONTACT</p>
-    <h2>Let's Build Something.</h2>
-  </div>
-
-  <div className="contact-content">
-    <div className="contact-intro">
-      <p>
-        I'm currently looking for opportunities to grow as a software
-        developer, contribute to real-world projects, and learn from
-        experienced development teams.
-      </p>
-
-      <p>
-        If you're interested in my work or would like to discuss an
-        opportunity, feel free to get in touch.
-      </p>
-    </div>
-
-    <div className="contact-links">
-      <a
-        href="https://github.com/Antidote857"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <span>GitHub</span>
-        <span>→</span>
-      </a>
-
-      <a
-  href="mailto:mgunibhekinkosi5@gmail.com"
->
-  <span>mgunibhekinkosi5@gmail.com</span>
-  <span>→</span>
-</a>
-
-      <a
-  href="https://www.linkedin.com/in/bhekinkosi-mguni-a336073b4"
-  target="_blank"
-  rel="noreferrer"
->
-  <span>LinkedIn</span>
-  <span>→</span>
-</a>
-    </div>
-  </div>
-</section>
-
-      {/* Footer */}
       <footer>
-        <p>© 2026 Bhekinkosi Mguni</p>
+        <p>© 2026 Bhekinkosi Mguni. Built with React and Vite.</p>
       </footer>
     </>
   )
